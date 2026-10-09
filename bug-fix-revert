@@ -1,0 +1,56 @@
+Command 1: Verify the pull request
+
+```bash
+curl -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12188
+```
+
+Relevant terminal output:
+
+```json
+{
+  "number": 12188,
+  "state": "closed",
+  "title": "Bug fix typo",
+  "html_url": "https://github.com/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pull/12188",
+  "merged": false,
+  "head": {
+    "label": "selvapillai28:bug-fix-typo",
+    "ref": "bug-fix-typo",
+    "repo": {
+      "full_name": "selvapillai28/mcino-Introduction-to-Git-and-GitHub",
+      "fork": true
+    },
+    "sha": "55bcb13a92514fe92d2f32f227396a05de742e1b"
+  },
+  "base": {
+    "label": "ibm-developer-skills-network:main",
+    "ref": "main",
+    "repo": {
+      "full_name": "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub",
+      "fork": false
+    }
+  },
+  "additions": 1,
+  "deletions": 0,
+  "changed_files": 1
+}
+```
+
+Command 2: Verify the fork relationship
+
+```bash
+curl -s https://api.github.com/repos/selvapillai28/mcino-Introduction-to-Git-and-GitHub
+```
+
+Relevant terminal output:
+
+```json
+{
+  "full_name": "selvapillai28/mcino-Introduction-to-Git-and-GitHub",
+  "fork": true,
+  "parent": {
+    "full_name": "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub",
+    "fork": false
+  }
+}
+```
